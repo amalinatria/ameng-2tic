@@ -172,7 +172,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="text" class="form-control" name="nama">
+                                <input type="email" class="form-control" name="email">
                             </div>
                             <div class="mb-3">
                                 <label for="pertanyaan" class="form-label">Pertanyaan</label>
