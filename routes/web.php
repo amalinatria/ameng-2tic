@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MatakuliahController;
 use Illuminate\Routing\Router;
 use App\Http\Controllers\QuestionController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use App\Http\Controllers\DashboardController;
 
 
 Route::get('/matakuliah/show/{kode?}', [MatakuliahController::class, 'show']);
@@ -42,3 +44,6 @@ Route::get('/home', [HomeController::class, 'index']);
 
 Route::post('question/store', [QuestionController::class, 'store'])
 		->name('question.store');
+
+Route::get('dashboard', [DashboardController::class, 'index'])
+    ->name('dashboard');
