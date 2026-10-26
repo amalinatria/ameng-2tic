@@ -8,6 +8,7 @@ use Illuminate\Routing\Router;
 use App\Http\Controllers\QuestionController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PelangganController;
 
 
 Route::get('/matakuliah/show/{kode?}', [MatakuliahController::class, 'show']);
@@ -47,3 +48,5 @@ Route::post('question/store', [QuestionController::class, 'store'])
 
 Route::get('dashboard', [DashboardController::class, 'index'])
     ->name('dashboard');
+
+Route::resource('pelanggan', PelangganController::class);
