@@ -4,12 +4,10 @@ use App\Http\Controllers\HomeController;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MatakuliahController;
-use Illuminate\Routing\Router;
 use App\Http\Controllers\QuestionController;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PelangganController;
-
+use App\Http\Controllers\UserController;
 
 Route::get('/matakuliah/show/{kode?}', [MatakuliahController::class, 'show']);
 
@@ -50,3 +48,5 @@ Route::get('dashboard', [DashboardController::class, 'index'])
     ->name('dashboard');
 
 Route::resource('pelanggan', PelangganController::class);
+
+Route::resource('user', UserController::class);
